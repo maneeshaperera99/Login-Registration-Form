@@ -1,3 +1,7 @@
+<?php
+   session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,12 +59,17 @@
         <li class="nav-item">
           <a class="nav-link" href="home.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="signup.php">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Log In</a>
-        </li>
+        <?php
+        if (isset($_SESSION["useruid"])) {
+          echo "<li class='nav-item'><a class='nav-link' href='profile.php'>Profile page</a></li>" ;
+          echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Log out</a></li>" ;
+        }
+        else {
+          echo "<li class='nav-item'><a class='nav-link' href='signup.php'>Sign Up</a></li>" ;
+          echo "<li class='nav-item'><a class='nav-link' href='login.php'>Log In</a></li>" ;
+        }
+        ?>
+        
       </ul>
       <!-- Left links -->
     </div>
