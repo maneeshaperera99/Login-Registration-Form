@@ -6,16 +6,37 @@ include_once 'header.php';
 
 <section class="d-flex justify-content-center">
     <div class="signup-form-form">
-    <h2 class="d-flex justify-content-center">Sign Up</h2>
+      
+    <h2 class="d-flex justify-content-center mb-4">Sign Up</h2>
+    
     <form action="includes/signup.inc.php" method="POST">
-        <div><input type="text" name="name" placeholder="Full name..."></div>
-        <div><input type="text" name="email" placeholder="Email..."></div>
-        <div><input type="text" name="uid" placeholder="Username..."></div>
-        <div><input type="password" name="pwd" placeholder="Password..."></div>
-        <div><input type="password" name="pwdrepeat" placeholder="Repeat Password..."></div>
-        <div><button type="submit" name="submit">Sign Up</button>
+    
+        <div>
+          <input type="text" id="form5Example1" class="form-control" name="name" placeholder="Full name...">
+          <label class="form-label" for="form6Example1"></label>
         </div>
+        <div>
+          <input type="text"id="form5Example2" class="form-control" name="email" placeholder="Email...">
+          <label class="form-label" for="form6Example2"></label>
+        </div>
+        <div>
+          <input type="text" id="form5Example3" class="form-control" name="uid" placeholder="Username...">
+          <label class="form-label" for="form6Example3"></label>
+        </div>
+        <div>
+          <input type="password" id="form5Example4" class="form-control" name="pwd" placeholder="Password...">
+          <label class="form-label" for="form6Example4"></label>
+        </div>
+        <div>
+          <input type="password" id="form5Example5" class="form-control" name="pwdrepeat" placeholder="Repeat Password...">
+          <label class="form-label" for="form6Example5"></label>
+        </div>
+        <div><button type="submit" class ="btn btn-primary btn-block " name="submit">Sign Up</button>
+        </div>
+    
+
     </form>
+    
     </div>
     <?php
   if (isset($_GET["error"])) {
